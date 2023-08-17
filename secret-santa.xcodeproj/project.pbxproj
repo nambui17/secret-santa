@@ -1,0 +1,743 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A6F359FD5690FB7E9482A596 /* Pods_secret_santaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5474F691D455FA16D0F20AF /* Pods_secret_santaTests.framework */; };
+		B7281C2BA1708D953FB9F1C6 /* Pods_secret_santa_secret_santaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5479A2B73B35276A074A3780 /* Pods_secret_santa_secret_santaUITests.framework */; };
+		ECC9C10F2A8EB3C9000BF973 /* secret_santaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9C10E2A8EB3C9000BF973 /* secret_santaApp.swift */; };
+		ECC9C1112A8EB3C9000BF973 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9C1102A8EB3C9000BF973 /* ContentView.swift */; };
+		ECC9C1132A8EB3CA000BF973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC9C1122A8EB3CA000BF973 /* Assets.xcassets */; };
+		ECC9C1162A8EB3CA000BF973 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC9C1152A8EB3CA000BF973 /* Preview Assets.xcassets */; };
+		ECC9C1202A8EB3CB000BF973 /* secret_santaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9C11F2A8EB3CB000BF973 /* secret_santaTests.swift */; };
+		ECC9C12A2A8EB3CB000BF973 /* secret_santaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9C1292A8EB3CB000BF973 /* secret_santaUITests.swift */; };
+		ECC9C12C2A8EB3CB000BF973 /* secret_santaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9C12B2A8EB3CB000BF973 /* secret_santaUITestsLaunchTests.swift */; };
+		F50AF0CA9D1A4EA640BBEDD5 /* Pods_secret_santa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336C599FD06D14CF79A6B25A /* Pods_secret_santa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ECC9C11C2A8EB3CB000BF973 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECC9C1032A8EB3C9000BF973 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECC9C10A2A8EB3C9000BF973;
+			remoteInfo = "secret-santa";
+		};
+		ECC9C1262A8EB3CB000BF973 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECC9C1032A8EB3C9000BF973 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECC9C10A2A8EB3C9000BF973;
+			remoteInfo = "secret-santa";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1008DB24E646942EE998EACC /* Pods-secret-santaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secret-santaTests.debug.xcconfig"; path = "Target Support Files/Pods-secret-santaTests/Pods-secret-santaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		336C599FD06D14CF79A6B25A /* Pods_secret_santa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_secret_santa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		498A1C74EAF7A3353FBC7CA2 /* Pods-secret-santaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secret-santaTests.release.xcconfig"; path = "Target Support Files/Pods-secret-santaTests/Pods-secret-santaTests.release.xcconfig"; sourceTree = "<group>"; };
+		5479A2B73B35276A074A3780 /* Pods_secret_santa_secret_santaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_secret_santa_secret_santaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		931C27736F5D4F9915BDCAC0 /* Pods-secret-santa-secret-santaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secret-santa-secret-santaUITests.debug.xcconfig"; path = "Target Support Files/Pods-secret-santa-secret-santaUITests/Pods-secret-santa-secret-santaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A5474F691D455FA16D0F20AF /* Pods_secret_santaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_secret_santaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7A69D07B11FEB14FE636E85 /* Pods-secret-santa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secret-santa.debug.xcconfig"; path = "Target Support Files/Pods-secret-santa/Pods-secret-santa.debug.xcconfig"; sourceTree = "<group>"; };
+		DE100B2661C14BB356D1B1FF /* Pods-secret-santa-secret-santaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secret-santa-secret-santaUITests.release.xcconfig"; path = "Target Support Files/Pods-secret-santa-secret-santaUITests/Pods-secret-santa-secret-santaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		ECC9C10B2A8EB3C9000BF973 /* secret-santa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "secret-santa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC9C10E2A8EB3C9000BF973 /* secret_santaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secret_santaApp.swift; sourceTree = "<group>"; };
+		ECC9C1102A8EB3C9000BF973 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ECC9C1122A8EB3CA000BF973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ECC9C1152A8EB3CA000BF973 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ECC9C11B2A8EB3CB000BF973 /* secret-santaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "secret-santaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC9C11F2A8EB3CB000BF973 /* secret_santaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secret_santaTests.swift; sourceTree = "<group>"; };
+		ECC9C1252A8EB3CB000BF973 /* secret-santaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "secret-santaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC9C1292A8EB3CB000BF973 /* secret_santaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secret_santaUITests.swift; sourceTree = "<group>"; };
+		ECC9C12B2A8EB3CB000BF973 /* secret_santaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secret_santaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F579F126EFCD912A5FCF9C35 /* Pods-secret-santa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secret-santa.release.xcconfig"; path = "Target Support Files/Pods-secret-santa/Pods-secret-santa.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECC9C1082A8EB3C9000BF973 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F50AF0CA9D1A4EA640BBEDD5 /* Pods_secret_santa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC9C1182A8EB3CB000BF973 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6F359FD5690FB7E9482A596 /* Pods_secret_santaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC9C1222A8EB3CB000BF973 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7281C2BA1708D953FB9F1C6 /* Pods_secret_santa_secret_santaUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		213C787BDD914693C00ECA42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				336C599FD06D14CF79A6B25A /* Pods_secret_santa.framework */,
+				5479A2B73B35276A074A3780 /* Pods_secret_santa_secret_santaUITests.framework */,
+				A5474F691D455FA16D0F20AF /* Pods_secret_santaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9DF0755377D2C132B3A2897 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7A69D07B11FEB14FE636E85 /* Pods-secret-santa.debug.xcconfig */,
+				F579F126EFCD912A5FCF9C35 /* Pods-secret-santa.release.xcconfig */,
+				931C27736F5D4F9915BDCAC0 /* Pods-secret-santa-secret-santaUITests.debug.xcconfig */,
+				DE100B2661C14BB356D1B1FF /* Pods-secret-santa-secret-santaUITests.release.xcconfig */,
+				1008DB24E646942EE998EACC /* Pods-secret-santaTests.debug.xcconfig */,
+				498A1C74EAF7A3353FBC7CA2 /* Pods-secret-santaTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ECC9C1022A8EB3C9000BF973 = {
+			isa = PBXGroup;
+			children = (
+				ECC9C10D2A8EB3C9000BF973 /* secret-santa */,
+				ECC9C11E2A8EB3CB000BF973 /* secret-santaTests */,
+				ECC9C1282A8EB3CB000BF973 /* secret-santaUITests */,
+				ECC9C10C2A8EB3C9000BF973 /* Products */,
+				B9DF0755377D2C132B3A2897 /* Pods */,
+				213C787BDD914693C00ECA42 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ECC9C10C2A8EB3C9000BF973 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECC9C10B2A8EB3C9000BF973 /* secret-santa.app */,
+				ECC9C11B2A8EB3CB000BF973 /* secret-santaTests.xctest */,
+				ECC9C1252A8EB3CB000BF973 /* secret-santaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECC9C10D2A8EB3C9000BF973 /* secret-santa */ = {
+			isa = PBXGroup;
+			children = (
+				ECC9C10E2A8EB3C9000BF973 /* secret_santaApp.swift */,
+				ECC9C1102A8EB3C9000BF973 /* ContentView.swift */,
+				ECC9C1122A8EB3CA000BF973 /* Assets.xcassets */,
+				ECC9C1142A8EB3CA000BF973 /* Preview Content */,
+			);
+			path = "secret-santa";
+			sourceTree = "<group>";
+		};
+		ECC9C1142A8EB3CA000BF973 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				ECC9C1152A8EB3CA000BF973 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ECC9C11E2A8EB3CB000BF973 /* secret-santaTests */ = {
+			isa = PBXGroup;
+			children = (
+				ECC9C11F2A8EB3CB000BF973 /* secret_santaTests.swift */,
+			);
+			path = "secret-santaTests";
+			sourceTree = "<group>";
+		};
+		ECC9C1282A8EB3CB000BF973 /* secret-santaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ECC9C1292A8EB3CB000BF973 /* secret_santaUITests.swift */,
+				ECC9C12B2A8EB3CB000BF973 /* secret_santaUITestsLaunchTests.swift */,
+			);
+			path = "secret-santaUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECC9C10A2A8EB3C9000BF973 /* secret-santa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECC9C12F2A8EB3CB000BF973 /* Build configuration list for PBXNativeTarget "secret-santa" */;
+			buildPhases = (
+				7F2F062F1A5CE8E119B977F9 /* [CP] Check Pods Manifest.lock */,
+				ECC9C1072A8EB3C9000BF973 /* Sources */,
+				ECC9C1082A8EB3C9000BF973 /* Frameworks */,
+				ECC9C1092A8EB3C9000BF973 /* Resources */,
+				142D39890EFCEADA8F9C4D37 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "secret-santa";
+			productName = "secret-santa";
+			productReference = ECC9C10B2A8EB3C9000BF973 /* secret-santa.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ECC9C11A2A8EB3CB000BF973 /* secret-santaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECC9C1322A8EB3CB000BF973 /* Build configuration list for PBXNativeTarget "secret-santaTests" */;
+			buildPhases = (
+				C898E24125987A7B15F95819 /* [CP] Check Pods Manifest.lock */,
+				ECC9C1172A8EB3CB000BF973 /* Sources */,
+				ECC9C1182A8EB3CB000BF973 /* Frameworks */,
+				ECC9C1192A8EB3CB000BF973 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECC9C11D2A8EB3CB000BF973 /* PBXTargetDependency */,
+			);
+			name = "secret-santaTests";
+			productName = "secret-santaTests";
+			productReference = ECC9C11B2A8EB3CB000BF973 /* secret-santaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ECC9C1242A8EB3CB000BF973 /* secret-santaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECC9C1352A8EB3CB000BF973 /* Build configuration list for PBXNativeTarget "secret-santaUITests" */;
+			buildPhases = (
+				0B3A97BC5271FB8209D0C999 /* [CP] Check Pods Manifest.lock */,
+				ECC9C1212A8EB3CB000BF973 /* Sources */,
+				ECC9C1222A8EB3CB000BF973 /* Frameworks */,
+				ECC9C1232A8EB3CB000BF973 /* Resources */,
+				C6B2032846960E4C3FD8E544 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECC9C1272A8EB3CB000BF973 /* PBXTargetDependency */,
+			);
+			name = "secret-santaUITests";
+			productName = "secret-santaUITests";
+			productReference = ECC9C1252A8EB3CB000BF973 /* secret-santaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECC9C1032A8EB3C9000BF973 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					ECC9C10A2A8EB3C9000BF973 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					ECC9C11A2A8EB3CB000BF973 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = ECC9C10A2A8EB3C9000BF973;
+					};
+					ECC9C1242A8EB3CB000BF973 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = ECC9C10A2A8EB3C9000BF973;
+					};
+				};
+			};
+			buildConfigurationList = ECC9C1062A8EB3C9000BF973 /* Build configuration list for PBXProject "secret-santa" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ECC9C1022A8EB3C9000BF973;
+			productRefGroup = ECC9C10C2A8EB3C9000BF973 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECC9C10A2A8EB3C9000BF973 /* secret-santa */,
+				ECC9C11A2A8EB3CB000BF973 /* secret-santaTests */,
+				ECC9C1242A8EB3CB000BF973 /* secret-santaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECC9C1092A8EB3C9000BF973 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC9C1162A8EB3CA000BF973 /* Preview Assets.xcassets in Resources */,
+				ECC9C1132A8EB3CA000BF973 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC9C1192A8EB3CB000BF973 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC9C1232A8EB3CB000BF973 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B3A97BC5271FB8209D0C999 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-secret-santa-secret-santaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		142D39890EFCEADA8F9C4D37 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-secret-santa/Pods-secret-santa-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-secret-santa/Pods-secret-santa-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-secret-santa/Pods-secret-santa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F2F062F1A5CE8E119B977F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-secret-santa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6B2032846960E4C3FD8E544 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-secret-santa-secret-santaUITests/Pods-secret-santa-secret-santaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-secret-santa-secret-santaUITests/Pods-secret-santa-secret-santaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-secret-santa-secret-santaUITests/Pods-secret-santa-secret-santaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C898E24125987A7B15F95819 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-secret-santaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECC9C1072A8EB3C9000BF973 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC9C1112A8EB3C9000BF973 /* ContentView.swift in Sources */,
+				ECC9C10F2A8EB3C9000BF973 /* secret_santaApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC9C1172A8EB3CB000BF973 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC9C1202A8EB3CB000BF973 /* secret_santaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC9C1212A8EB3CB000BF973 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC9C12C2A8EB3CB000BF973 /* secret_santaUITestsLaunchTests.swift in Sources */,
+				ECC9C12A2A8EB3CB000BF973 /* secret_santaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECC9C11D2A8EB3CB000BF973 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECC9C10A2A8EB3C9000BF973 /* secret-santa */;
+			targetProxy = ECC9C11C2A8EB3CB000BF973 /* PBXContainerItemProxy */;
+		};
+		ECC9C1272A8EB3CB000BF973 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECC9C10A2A8EB3C9000BF973 /* secret-santa */;
+			targetProxy = ECC9C1262A8EB3CB000BF973 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		ECC9C12D2A8EB3CB000BF973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ECC9C12E2A8EB3CB000BF973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECC9C1302A8EB3CB000BF973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7A69D07B11FEB14FE636E85 /* Pods-secret-santa.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"secret-santa/Preview Content\"";
+				DEVELOPMENT_TEAM = XC858XYU47;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nambui.secret-santa";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ECC9C1312A8EB3CB000BF973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F579F126EFCD912A5FCF9C35 /* Pods-secret-santa.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"secret-santa/Preview Content\"";
+				DEVELOPMENT_TEAM = XC858XYU47;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nambui.secret-santa";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ECC9C1332A8EB3CB000BF973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1008DB24E646942EE998EACC /* Pods-secret-santaTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XC858XYU47;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nambui.secret-santaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/secret-santa.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/secret-santa";
+			};
+			name = Debug;
+		};
+		ECC9C1342A8EB3CB000BF973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 498A1C74EAF7A3353FBC7CA2 /* Pods-secret-santaTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XC858XYU47;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nambui.secret-santaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/secret-santa.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/secret-santa";
+			};
+			name = Release;
+		};
+		ECC9C1362A8EB3CB000BF973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 931C27736F5D4F9915BDCAC0 /* Pods-secret-santa-secret-santaUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XC858XYU47;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nambui.secret-santaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "secret-santa";
+			};
+			name = Debug;
+		};
+		ECC9C1372A8EB3CB000BF973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE100B2661C14BB356D1B1FF /* Pods-secret-santa-secret-santaUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XC858XYU47;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nambui.secret-santaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "secret-santa";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECC9C1062A8EB3C9000BF973 /* Build configuration list for PBXProject "secret-santa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC9C12D2A8EB3CB000BF973 /* Debug */,
+				ECC9C12E2A8EB3CB000BF973 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECC9C12F2A8EB3CB000BF973 /* Build configuration list for PBXNativeTarget "secret-santa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC9C1302A8EB3CB000BF973 /* Debug */,
+				ECC9C1312A8EB3CB000BF973 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECC9C1322A8EB3CB000BF973 /* Build configuration list for PBXNativeTarget "secret-santaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC9C1332A8EB3CB000BF973 /* Debug */,
+				ECC9C1342A8EB3CB000BF973 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECC9C1352A8EB3CB000BF973 /* Build configuration list for PBXNativeTarget "secret-santaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC9C1362A8EB3CB000BF973 /* Debug */,
+				ECC9C1372A8EB3CB000BF973 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECC9C1032A8EB3C9000BF973 /* Project object */;
+}
