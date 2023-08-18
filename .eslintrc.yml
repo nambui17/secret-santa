@@ -1,0 +1,14 @@
+env:
+  browser: true
+  commonjs: true
+  es2021: true
+extends: eslint:recommended
+parserOptions:
+  ecmaVersion: latest
+rules:
+  no-irregular-whitespace: true
+  no-unexpected-multiline: true
+  no-unreachable: true
+  array-bracket-newline: true
+  array-bracket-spacing: true
+  comma-dangle: [2, never]

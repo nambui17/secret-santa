@@ -1,2 +1,5 @@
 .DS_Store
-Pods
+Pods/
+.env
+node_modules
+package-lock.json
