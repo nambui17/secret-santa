@@ -6,7 +6,7 @@ extends: eslint:recommended
 parserOptions:
   ecmaVersion: latest
 rules:
-  no-irregular-whitespace: true
+  no-irregular-whitespace: 1
   no-unexpected-multiline: true
   no-unreachable: true
   array-bracket-newline: true

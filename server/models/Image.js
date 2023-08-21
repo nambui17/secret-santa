@@ -1,10 +1,15 @@
-const mongoose = require("mongoose");
+import mongoose from 'mongoose'
 const { Schema } = mongoose;
 
 const imageSchema = new Schema(
   {
     fileId: {
         type: String,
+    },
+    wishId: {
+      type: Schema.ObjectId,
+      required: true,
+      ref: "Wish"
     }
   },
   {
@@ -14,4 +19,4 @@ const imageSchema = new Schema(
 
 const Image = mongoose.model('Image', imageSchema);
 
-module.exports = Image;
+export default Image;

@@ -1,5 +1,5 @@
 // Group of friends penguin pack
-const mongoose = require("mongoose");
+import mongoose from 'mongoose'
 const { Schema } = mongoose;
 
 const packSchema = new Schema(
@@ -25,6 +25,12 @@ const packSchema = new Schema(
             type: Schema.ObjectId,
             ref: 'Assignment'
         }
+    ],
+    wishes: [
+      {
+        type: Schema.ObjectId,
+        ref: "Wish"
+      }
     ]
   },
   {
@@ -34,4 +40,4 @@ const packSchema = new Schema(
 
 const Pack = mongoose.model('Pack', packSchema);
 
-module.exports = Pack;
+export default Pack;

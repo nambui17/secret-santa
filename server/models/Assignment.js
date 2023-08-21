@@ -1,33 +1,35 @@
 // Group of friends penguin pack
-const mongoose = require("mongoose");
+import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 const assignmentSchema = new Schema(
   {
     packId: {
-        type: Schema.Types.ObjectId,
-        required: true,
-        ref: 'Pack',
-      },
-      giver: {
-        type: Schema.Types.ObjectId,
-        ref: 'Users',
-        required: true,
-      },
-      receiver: {
-        type: Schema.Types.ObjectId,
-        ref: 'Users',
-        required: true,
-      },
+      type: Schema.Types.ObjectId,
+      required: true,
+      ref: 'Pack',
+    },
+    gifter: {
+      type: Schema.Types.ObjectId,
+      ref: 'Users',
+      required: true,
+      unique: true,
+    },
+    receiver: {
+      type: Schema.Types.ObjectId,
+      ref: 'Users',
+      required: true,
+      unique: true,
+    },
   },
   {
     toJSON: {
-        virtuals: true,
+      virtuals: true,
     },
     timestamps: true,
-  }
+  },
 );
 
 const Assignment = mongoose.model('Assignment', assignmentSchema);
 
-module.exports = Assignment;
+export default Assignment;
