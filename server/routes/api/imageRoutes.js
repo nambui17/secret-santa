@@ -5,10 +5,10 @@ import {
 } from '../../controllers/imageController.js'
 const router = express.Router();
 
-router.route("/:_id")
+router.route("/add-image/:_id")
     .post(addImage)
 
-router.route("/")
+router.route("/delete-image")
     .delete(removeImage)
     
 export default router;

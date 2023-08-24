@@ -1,6 +1,6 @@
 import { Wish, User, Pack, Image } from "../models/index.js"
 
-async function createWish(req, res) {
+async function createWish({body}, res) {
     /**
      * Wishes are tied to packs
      * req.body = {
@@ -11,12 +11,12 @@ async function createWish(req, res) {
      * }
      */
     try {
-        const wishData = await Wish.create(req.body);
+        const wishData = await Wish.create(body);
         if (!wishData) {
             throw new Error("Could not create wish")
         }
         const packData = await Pack.findOneAndUpdate(
-            {_id: req.params.packId},
+            {_id: body.packId},
             {$addToSet: wishData._id},
             {new: true}
         )
@@ -24,13 +24,18 @@ async function createWish(req, res) {
             throw new Error("Could not add wish to Pack")
         }
         const userData = await User.findOneAndUpdate(
-            {_id: req.params.userId},
+            {_id: body.userId},
             { $addToSet: { wishes: wishData._id}},
             {
                 runValidators: true,
                 new: true,
             }
-        ).populate('wishes')
+        )
+        .populate('wishes', 'wishName packId')
+        .populate({
+            path: "wishes.packId",
+            model: "Pack"
+        })
         if (!userData) {
             throw new Error("Could not add wish to user")
         }
@@ -99,8 +104,38 @@ async function updateWish(req, res) {
     }
 }
 
+async function getAllWishes(req,res) {
+    try {
+        const wishData = await Wish.find()
+        .populate("images")
+        .populate("packId", "packName")
+        if (!wishData) {
+            throw new Error("Could not get all Wishes")
+        }
+        res.status(200).json(wishData)
+    } catch (err) {
+        res.status(400).json(err)
+    }
+}
+
+async function getWishById({body},res) {
+    try {
+        const wishData = await Wish.findOne(
+            {_id: body._id}
+        ).populate("images", "fileId")
+        if (!wishData) {
+            throw new Error("Could not get all Wishes")
+        }
+        res.status(200).json(wishData)
+    } catch (err) {
+        res.status(400).json(err)
+    }
+}
+
 export {
     createWish,
     deleteWish,
     updateWish,
+    getAllWishes,
+    getWishById,
 }

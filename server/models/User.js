@@ -1,7 +1,9 @@
 // User mongodb model
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
+import bcrypt from 'bcrypt';
+import validator from 'validator';
 const { Schema } = mongoose;
-import bcrypt from "bcrypt";
+const { isEmail } = validator;
 
 const userSchema = new Schema(
   {
@@ -19,6 +21,8 @@ const userSchema = new Schema(
       unique: true,
       required: true,
       trim: true,
+      immutable: true,
+      validate: [isEmail, 'Invalid email'],
     },
     password: {
       type: String,
@@ -28,25 +32,25 @@ const userSchema = new Schema(
     wishes: [
       {
         type: Schema.Types.ObjectId,
-        ref: "Wish",
+        ref: 'Wish',
       },
     ],
     friends: [
       {
         type: Schema.Types.ObjectId,
-        ref: "Friend",
+        ref: 'Friend',
       },
     ],
     packs: [
       {
         type: Schema.Types.ObjectId,
-        ref: "Pack",
+        ref: 'Pack',
       },
     ],
     assignments: [
       {
         type: Schema.Types.ObjectId,
-        ref: "Assignment",
+        ref: 'Assignment',
       },
     ],
   },
@@ -55,11 +59,11 @@ const userSchema = new Schema(
       virtuals: true,
     },
     timestamps: false,
-  }
+  },
 );
 
-userSchema.pre("save", async function (next) {
-  if (this.isNew || this.isModified("password")) {
+userSchema.pre('save', async function (next) {
+  if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
   }
@@ -70,6 +74,6 @@ userSchema.methods.isCorrectPassword = async function (password) {
   return await bcrypt.compare(password, this.password);
 };
 
-const User = mongoose.model("User", userSchema);
+const User = mongoose.model('User', userSchema);
 
 export default User;

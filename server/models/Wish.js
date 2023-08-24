@@ -3,6 +3,10 @@ const { Schema } = mongoose;
 
 const wishSchema = new Schema(
   {
+    wishName: {
+      type: String,
+      required: true
+    },
     userId: {
       type: Schema.ObjectId,
       required: true,

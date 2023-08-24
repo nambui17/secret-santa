@@ -1,13 +1,14 @@
 import { User, Pack, Assignment, Wish, Image} from '../models/index.js';
+import mongoose from 'mongoose'
 
 async function createPack(req,res) {
     try {
-        const packData = Pack.create(req.body)
+        const packData = await Pack.create(req.body)
         if (!packData) {
             throw new Error("Could not create new pack")
         }
-        const userData = User.findOneAndUpdate(
-            {_id: req.params.userId},
+        const userData = await User.findOneAndUpdate(
+            {_id: req.body.admin},
             { $addToSet: { packs: packData._id}},
             { new: true}
         ).populate("packs")
@@ -23,29 +24,33 @@ async function createPack(req,res) {
 async function deletePack({body},res) {
     try {
         const {packId} = body
-        const packData = Pack.findOneAndDelete(
+        const packData = await Pack.findOneAndDelete(
             {_id: packId}
         )
         if (!packData) {
             throw new Error("Could not delete pack")
         }
-        for (i=0; i<packData.members.length-1; i++) {
-            await User.findOneAndUpdate(
-                {_id: packData.members[i]},
-                {$pull: {packs: packId}},
-                {new: true}
+        await User.updateMany(
+            {_id: {$in: packData.members}},
+            {$pull: {packs: packData._id}},
+            {new: true}
+        )
+        if (packData.assignments.length > 0) {
+            await Assignment.deleteMany(
+                {_id: {$in: packData.assignments}}
             )
         }
-        await Assignment.deleteMany(
-            {_id: {$in: packData.assignments}}
-        )
-        for (i=0; i<packData.wishes.length-1; i++) {
-            const wishData = await Wish.findOneAndDelete(
-                {_id: packData.wishes[i]}
-            )
-            await Image.deleteMany(
-                {_id: {$in: wishData.images}}
-            )
+        if (packData.wishes.length > 0) {
+            for (i=0; i < packData.wishes.length ; i++) {
+                const wishData = await Wish.findOneAndDelete(
+                    {_id: packData.wishes[i]}
+                )
+                if (wishData.images.length>0) {
+                    await Image.deleteMany(
+                        {_id: {$in: wishData.images}}
+                    )
+                }
+            }
         }
         res.status(200).json("Pack was deleted")
     } catch (err) {
@@ -56,7 +61,7 @@ async function deletePack({body},res) {
 async function addUserPack({body},res) {
     try {
         const {userId, packId} = body
-        const packData = Pack.findOneAndUpdate(
+        const packData = await Pack.findOneAndUpdate(
             {_id: packId},
             {$addToSet: { members: userId}},
             {new: true}
@@ -64,7 +69,7 @@ async function addUserPack({body},res) {
         if (!packData) {
             throw new Error("Could not add user to pack")
         }
-        const userData = User.findOneAndUpdate(
+        const userData = await User.findOneAndUpdate(
             {_id: userId},
             {$addToSet: { packs: packId}},
             { new: true}
@@ -81,7 +86,7 @@ async function addUserPack({body},res) {
 async function removeUserPack({body},res) {
     try {
         const {userId, packId} = body
-        const packData = Pack.findOneAndUpdate(
+        const packData = await Pack.findOneAndUpdate(
             {_id: packId},
             {$pull: {members: userId}},
             {new: true}
@@ -89,7 +94,7 @@ async function removeUserPack({body},res) {
         if (!packData) {
             throw new Error("Could not remove user from pack")
         }
-        const userData = User.findOneAndUpdate(
+        const userData = await User.findOneAndUpdate(
             {_id: userId},
             {$pull: {packs: packId}},
             {new: true}
@@ -103,9 +108,38 @@ async function removeUserPack({body},res) {
     }
 }
 
+async function getPacks(req,res) {
+    try {
+        const packData = await Pack.find()
+        if (!packData) {
+            throw new Error("Could not get packs")
+        }
+        res.status(200).json(packData)
+    } catch (err) {
+        res.status(400).json(err)
+    }
+}
+
+async function getPackById({body},res) {
+    try {
+        const packData = await Pack.findById(body._id)
+            .populate("assignments", "gifter receiver")
+            .populate("wishes", "images wishName")
+            .populate("members", "firstName lastName email")
+        if (!packData) {
+            throw new Error("Could not find pack")
+        }
+        res.status(200).json(packData)
+    } catch (err) {
+        res.status(400).json(err)
+    }
+}
+
 export {
     createPack,
     deletePack,
     addUserPack,
-    removeUserPack
+    removeUserPack,
+    getPacks,
+    getPackById
 }

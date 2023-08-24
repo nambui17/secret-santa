@@ -4,19 +4,27 @@ import {
     deletePack,
     addUserPack,
     removeUserPack,
+    getPacks,
+    getPackById
 } from '../../controllers/packController.js'
 const router = express.Router();
 
-router.route('/:userId')
+router.route('/create-pack')
     .post(createPack)
 
-router.route('/')
+router.route('/delete-pack')
     .delete(deletePack)
 
-router.route('/addUser')
+router.route('/add-user')
     .put(addUserPack)
 
-router.route('/removeUser')
+router.route('/remove-user')
     .put(removeUserPack)
+
+router.route('/')
+    .get(getPacks)
+
+router.route('/pack-by-id')
+    .get(getPackById)
 
 export default router;
