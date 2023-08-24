@@ -2,13 +2,14 @@ env:
   browser: true
   commonjs: true
   es2021: true
+  environment: es6
 extends: eslint:recommended
 parserOptions:
   ecmaVersion: latest
 rules:
   no-irregular-whitespace: 1
-  no-unexpected-multiline: true
-  no-unreachable: true
-  array-bracket-newline: true
-  array-bracket-spacing: true
+  no-unexpected-multiline: 1
+  no-unreachable: 1
+  array-bracket-newline: 1
+  array-bracket-spacing: 1
   comma-dangle: [2, never]

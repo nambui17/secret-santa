@@ -1,4 +1,5 @@
 import { User } from "../models/index.js";
+import bcrypt from 'bcrypt';
 
 async function createUser({body}, res) {
   try {
@@ -39,13 +40,21 @@ async function deleteUser(req, res) {
 }
 
 async function updateUser(req, res) {
+  /**
+   * Updates user info
+   */
   try {
+    let body = req.body
+    if (body.password) {
+      const saltRounds = 10
+      body.password = await bcrypt.hash(body.password, saltRounds)
+    }
     const userData = await User.findOneAndUpdate(
       {
         _id: req.params._id,
       },
       {
-        $set: req.body
+        $set: body
       },
       {
         runValidators: true,
@@ -61,9 +70,23 @@ async function updateUser(req, res) {
   }
 }
 
+async function getAllUsers(req,res) {
+  try {
+    const userData = await User.find()
+    .select("_id firstName lastName email wishes packs assignments")
+    if (!userData) {
+      throw new Error("Could not fetch user data")
+    }
+    res.status(200).json(userData)
+  } catch (err) {
+    res.status(400).json(err)
+  }
+}
+
 export {
   createUser,
   getUserById,
   deleteUser,
   updateUser,
+  getAllUsers
 };

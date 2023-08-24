@@ -6,10 +6,10 @@ import {
 
 const router = express.Router();
 
-router.route('/:userId')
+router.route('/create-assign/:userId')
     .post(addAssignment)
 
-router.route('/remove')
+router.route('/remove-assign')
     .delete(removeAssignment)
 
 export default router
